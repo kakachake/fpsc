@@ -1,12 +1,15 @@
 {
   "name": "fpsc",
   "version": "1.0.0",
-  "description": "",
+  "description": "项目规范构建",
+  "anthor": "",
+  "licenses": "ISC",
   "main": "index.ts",
   "bin": {
     "fpsc": "./dist/index.js"
   },
   "scripts": {
+    "dev": "nodemon --watch src -e ts --exec pnpm run build",
     "build": "tsc && node ./build/build.js",
     "commit": "cz"
   },
@@ -14,18 +17,26 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@commitlint/config-angular": "^17.6.3",
     "@commitlint/config-conventional": "^17.6.3",
+    "@types/cross-spawn": "^6.0.2",
+    "@types/fs-extra": "^11.0.1",
     "@types/node": "^20.2.3",
+    "@types/prompts": "^2.4.4",
     "commitizen": "^4.3.0",
     "commitlint": "^17.6.3",
+    "cross-spawn": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
     "cz-customizable": "^7.0.0",
     "esbuild": "^0.17.19",
+    "fs-extra": "^11.1.1",
     "husky": "^8.0.3",
     "typescript": "^5.0.4"
   },
   "dependencies": {
-    "cac": "^6.7.14"
+    "cac": "^6.7.14",
+    "chalk": "^5.2.0",
+    "prompts": "^2.4.2"
   },
   "config": {
     "commitizen": {
